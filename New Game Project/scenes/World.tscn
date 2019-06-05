@@ -6,7 +6,6 @@
 [node name="World" type="Node2D"]
 
 [node name="Node2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 506.156, 272.953 )
 
 [node name="Text Box" type="Polygon2D" parent="."]
 color = Color( 0.254902, 0.254902, 0.254902, 1 )
