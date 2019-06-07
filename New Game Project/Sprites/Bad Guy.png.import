@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bad Guy.png-6427dba7f5dd3bed7dc35ae15b3d6f53.stex"
+path="res://.import/Bad Guy.png-edb2c26f2dac9dd03aec18241fb4ca3d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Bad Guy.png"
-dest_files=[ "res://.import/Bad Guy.png-6427dba7f5dd3bed7dc35ae15b3d6f53.stex" ]
+source_file="res://sprites/Bad Guy.png"
+dest_files=[ "res://.import/Bad Guy.png-edb2c26f2dac9dd03aec18241fb4ca3d.stex" ]
 
 [params]
 
