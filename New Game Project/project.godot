@@ -8,15 +8,25 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "base",
+"language": "GDScript",
+"path": "res://base.gd"
+} ]
 _global_script_class_icons={
-
+"base": ""
 }
 
 [application]
 
 config/name="New Game Project"
+run/main_scene="res://scenes/World.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+dir="*res://compass.gd"
 
 [input]
 
