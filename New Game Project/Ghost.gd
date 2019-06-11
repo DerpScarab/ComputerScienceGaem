@@ -1,20 +1,12 @@
-extends base.class
+extends KinematicBody2D
 
-const SPEED = 400
+var reached = false
+const SPEED = 200
+const ROTATION_SPEED = 20
 
-var movetimer_length = 15
-var movetimer = 0
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	movedir = dir.rand()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	movement_loop()
-	if movetimer > 0:
-		movetimer -= 1
-	if movetimer == 0 || is_on_wall():
-		movedir = dir.rand()
-		movetimer = movetimer_length
-		
+	var ang = get_angle_to(get_node("res://Player.tscn").get_pos())
+	rotate(ang*ROTATION_SPEED*delta)
+	var x = get_position("res://Player.tscn")
+	var y = -sin(ang)
+	move_and_slide(Vector2(x*SPEED,y*SPEED))

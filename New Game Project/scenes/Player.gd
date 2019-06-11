@@ -25,3 +25,11 @@ func controls_loop():
 func movement_loop():
 	var motion = movedir.normalized() * SPEED
 	move_and_slide(motion, Vector2(0,0))
+	for i in range(get_slide_count() - 1):
+		var collision = get_slide_collision(i)
+		var collisiontype = str(collision.collider.name)
+		check_collision(collisiontype)
+		
+func check_collision(collisiontype):
+	if collisiontype == "Skeletal" || collisiontype == "Ghost":
+		get_tree().change_scene("res://scenes/death.tscn")

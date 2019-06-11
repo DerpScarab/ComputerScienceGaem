@@ -1,4 +1,4 @@
-extends Node
+extends KinematicBody2D
 
 const center = Vector2(0,0)
 const left = Vector2(-1,0)
