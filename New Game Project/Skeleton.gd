@@ -11,7 +11,6 @@ signal skeletondead
 func _ready():
 	movedir = dir.rand()
 	add_to_group("enemies")
-	$hitbox.connect("body_entered", self, "death")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -29,7 +28,3 @@ func movement_loop():
 	
 func sprite_loop():
 	$anim.play("default")
-	
-func death():
-	emit_signal("skeletondead")
-	queue_free()

@@ -9,7 +9,7 @@ var attack = preload("res://scenes/attack.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$CollisionShape2D.connect("body_entered", self, "death")
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -51,6 +51,7 @@ func anim_loop():
 func movement_loop():
 	var motion = movedir.normalized() * SPEED
 	move_and_slide(motion, Vector2(0,0))
-
-func death():
-	get_tree().change_scene("res://scenes/lose.tscn")
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+		if collision.collider.name == "Skeletal" || collision.collider.name == "Ghost" || collision.collider.name == "Skeletal" && collision.collider.name == "Ghost":
+			get_tree().change_scene("res://scenes/lose.tscn")
