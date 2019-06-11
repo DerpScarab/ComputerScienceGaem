@@ -1,11 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://wall.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Player.gd" type="Script" id=3]
-[ext_resource path="res://Enemy_1.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Skeleton.gd" type="Script" id=5]
-[ext_resource path="res://Tutorial_Spirit.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Camera.gd" type="Script" id=4]
 
 [node name="Node2D" type="Node2D"]
 
@@ -21,11 +19,4 @@ script = ExtResource( 3 )
 [node name="Camera" type="Camera2D" parent="TileMap/Player"]
 current = true
 zoom = Vector2( 4, 4 )
-
-[node name="Skeletal" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1721.13, 848.012 )
-script = ExtResource( 5 )
-
-[node name="Ghost" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1690.45, 1118.6 )
-script = ExtResource( 5 )
+script = ExtResource( 4 )

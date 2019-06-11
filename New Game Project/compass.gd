@@ -7,7 +7,7 @@ const up = Vector2(0,-1)
 const down = Vector2(0,1)
 
 func rand():
-	var d = rand() % 4 + 1
+	var d = randi()%4+1
 	match d:
 		1:
 			return left
